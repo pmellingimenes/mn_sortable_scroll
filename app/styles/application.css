@@ -1,0 +1,30 @@
+@import "~perfect-scrollbar/css/perfect-scrollbar.css"
+html,body{ margin:0; padding:0; height:100%; width:100%; overflow: hidden; }
+#app {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.root {
+  position: relative;
+  overflow: auto;
+  width: 100%;
+  height: 500px;
+}
+.columns-wrapper {
+  position: relative;
+  display: block;
+  height: 300px;
+  width: 100%;
+  background: white;
+  white-space: nowrap;
+  font-size: 18px;
+}
+.column {
+  width: 300px;
+  height: 200px;
+  display: inline-block;
+  background: #ccc;
+  margin: 4px;
+}
