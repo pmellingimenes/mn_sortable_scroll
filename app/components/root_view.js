@@ -55,7 +55,7 @@ const ScrollMachine = Marionette.MnObject.extend({
       this.scrollingRight = true
       interval(0, animationFrameScheduler)
         .pipe(
-          takeUntil(fromEvent(document, 'ps-x-reach-end')),
+          takeUntil(fromEvent(this.el, 'ps-x-reach-end')),
           takeUntil(fromEvent(this, 'stopscroll')),
           takeUntil(fromEvent(this, 'stopscroll:right'))
         )
@@ -65,7 +65,7 @@ const ScrollMachine = Marionette.MnObject.extend({
       this.scrollingLeft = true
       interval(0, animationFrameScheduler)
         .pipe(
-          takeUntil(fromEvent(document, 'ps-x-reach-end')),
+          takeUntil(fromEvent(this.el, 'ps-x-reach-end')),
           takeUntil(fromEvent(this, 'stopscroll')),
           takeUntil(fromEvent(this, 'stopscroll:left'))
         )
